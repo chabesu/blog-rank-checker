@@ -1,0 +1,5 @@
+pandas
+gspread
+google
+streamlit
+altair
