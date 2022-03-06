@@ -17,7 +17,7 @@ st.sidebar.write("""
 ## Blog Rank Checker
 """)
 
-@st.cache
+@st.cache(ttl=43200)    # 12時間(43200秒)毎に再実行する
 def get_data():
     # スプレッドシートの認証    
     service_account_key = st.secrets.service_account_file
