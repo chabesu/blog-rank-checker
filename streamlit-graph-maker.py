@@ -33,7 +33,7 @@ def get_data():
     # スプレッドシート「blog-rank-database-share」からデータ取得
     SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key      # スプレッドシートのキー。シート名は「blog-rank-database-share」
     sh = gc.open_by_key(SP_SHEET_KEY)
-    SP_SHEET = 'db_share'                           # シート名「db_share」を指定
+    SP_SHEET = 'db_original'                        # シート名「db_original」を指定
     worksheet = sh.worksheet(SP_SHEET)              # db_shareシートを取得
     data = worksheet.get_all_values()               # シート内の全データを取得
     df = pd.DataFrame(data[1:], columns=data[0])    # 取得したデータをデータフレームに変換
